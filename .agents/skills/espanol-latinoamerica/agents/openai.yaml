@@ -1,0 +1,7 @@
+interface:
+  display_name: "Español Latinoamérica"
+  short_description: "Revisa gramática y tono latinoamericano"
+  brand_color: "#155B43"
+  default_prompt: "Usa $espanol-latinoamerica para revisar y mejorar este contenido sin cambiar su intención."
+policy:
+  allow_implicit_invocation: true
