@@ -8,6 +8,7 @@ Los cambios relevantes se documentan aquí antes de publicarse.
 
 - Regla transversal de sincronización documental, matriz de impacto, verificación automática y checklist de revisión.
 - Repositorio público y flujo de publicación del portafolio en GitHub Pages.
+- Primera publicación verificada en `https://juan-lozada.github.io/portafolio/`.
 - Exclusión de artefactos locales de análisis para evitar publicar rutas del equipo.
 - Normalización de finales de línea y tratamiento explícito de recursos binarios para colaboración multiplataforma.
 

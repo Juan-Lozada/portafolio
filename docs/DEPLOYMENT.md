@@ -3,6 +3,7 @@
 - Repositorio: https://github.com/Juan-Lozada/portafolio
 - URL pública: https://juan-lozada.github.io/portafolio/
 - Modalidad: GitHub Project Pages mediante GitHub Actions.
+- Estado: publicado y verificado el 2 de septiembre de 2026.
 
 ## Arquitectura de publicación
 
@@ -22,7 +23,7 @@ El flujo calcula automáticamente:
 4. Confirmar que la rama pública se llame `main` o ajustar ambos workflows.
 5. Ejecutar “Deploy GitHub Pages” manualmente o hacer push a `main`.
 
-Los pasos 1 y la preparación técnica ya se completaron el 2 de septiembre de 2026. La activación se verifica mediante la ejecución real del workflow y la respuesta pública de la URL.
+La activación inicial se completó el 2 de septiembre de 2026. Los workflows `Quality` y `Deploy GitHub Pages` finalizaron correctamente; también se verificaron la landing y la ruta `/proyectos/observa/` desde el dominio público.
 
 ## Restricciones conscientes
 
