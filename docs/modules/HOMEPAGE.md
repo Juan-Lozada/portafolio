@@ -16,4 +16,6 @@ Los únicos medios de contacto publicados son LinkedIn y GitHub. El repositorio 
 
 ## Reglas de diseño
 
+Las tarjetas de Ruta y Mesa y sus enlaces en el relato abren páginas de construcción, con el estado visible antes de navegar. Observa se identifica como demo disponible. En el relato animado solo el panel activo admite clics y foco (`inert` en los restantes); la versión de movimiento reducido conserva enlaces a los tres proyectos. Ver `docs/modules/PENDING_PROJECTS.md`.
+
 Los encabezados comunican una sola idea y se limitan visualmente a una o dos líneas en anchos habituales. Las animaciones apoyan la jerarquía, pero el contenido sigue completo en HTML y conserva alternativa sin movimiento.

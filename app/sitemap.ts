@@ -18,5 +18,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
+    ...['ruta', 'mesa'].map((project) => ({
+      url: `${baseUrl}/proyectos/${project}`,
+      changeFrequency: 'monthly' as const,
+      priority: 0.3,
+    })),
   ];
 }

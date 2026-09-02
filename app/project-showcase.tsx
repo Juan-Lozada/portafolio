@@ -44,9 +44,9 @@ const previews = [
     description: 'Vehículos, prioridades y mantenimientos organizados en un solo flujo.',
     descriptionEn: 'Vehicles, priorities and maintenance organized in one flow.',
     icon: CarFront,
-    href: null,
-    status: 'En diseño',
-    statusEn: 'In design',
+    href: '/proyectos/ruta',
+    status: 'En construcción',
+    statusEn: 'Under construction',
     visual: 'route',
     statement: 'Coordinar una operación completa desde una vista priorizada.',
     statementEn: 'Coordinate a complete operation from a prioritized view.',
@@ -63,9 +63,9 @@ const previews = [
     description: 'Una experiencia móvil simple para revisar, dividir y pagar una cuenta.',
     descriptionEn: 'A simple mobile experience to review, split and pay a bill.',
     icon: CreditCard,
-    href: null,
-    status: 'Planificado',
-    statusEn: 'Planned',
+    href: '/proyectos/mesa',
+    status: 'En construcción',
+    statusEn: 'Under construction',
     visual: 'payment',
     statement: 'Reducir la fricción en el momento más sensible del servicio.',
     statementEn: 'Reduce friction at the most sensitive point of the service.',
@@ -109,7 +109,7 @@ function AnimatedPreview({ type }: { type: string }) {
   );
 }
 
-function StoryPanel({ project, index, progress }: { project: (typeof previews)[number]; index: number; progress: MotionValue<number> }) {
+function StoryPanel({ project, index, progress, active }: { project: (typeof previews)[number]; index: number; progress: MotionValue<number>; active: boolean }) {
   const { locale, copy } = useLocale();
   const ranges = [
     { input: [0, 0.08, 0.28, 0.39], opacity: [1, 1, 1, 0], y: ['0%', '0%', '-4%', '-14%'], scale: [1, 1, .98, .94] },
@@ -121,14 +121,14 @@ function StoryPanel({ project, index, progress }: { project: (typeof previews)[n
   const scale = useTransform(progress, ranges.input, ranges.scale);
 
   return (
-    <motion.article className={styles.storyPanel} style={{ opacity, y, scale }} aria-hidden={undefined}>
+    <motion.article className={styles.storyPanel} style={{ opacity, y, scale, pointerEvents: active ? 'auto' : 'none' }} aria-hidden={!active} inert={!active}>
       <div className={styles.storyCopy}>
         <span className={styles.storyNumber}>{project.number} / 03</span>
         <p>{locale === 'en' ? project.categoryEn : project.category}</p>
         <h3>{locale === 'en' ? project.statementEn : project.statement}</h3>
         <ul>{(locale === 'en' ? project.skillsEn : project.skills).map((skill) => <li key={skill}>{skill}</li>)}</ul>
         <strong>{locale === 'en' ? project.resultEn : project.result}</strong>
-        {project.href ? <Link href={project.href}>{copy('Abrir experiencia', 'Open experience')} <span aria-hidden="true">↗</span></Link> : <span className={styles.comingSoon}>{copy('Caso en desarrollo', 'Case in progress')}</span>}
+        <Link href={project.href}>{project.name === 'Observa' ? copy('Abrir experiencia', 'Open experience') : copy('Ver proyecto · En construcción', 'View project · Under construction')} <span aria-hidden="true">↗</span></Link>
       </div>
       <div className={styles.storyVisual}>
         <div className={styles.storyWindowBar}><span /><span /><span /><small>{project.name.toLowerCase()}.demo</small></div>
@@ -156,7 +156,7 @@ function ScrollStory() {
       <div className={styles.reducedStories}>
         {previews.map((project) => (
           <article key={project.name}>
-            <div><span>{project.number}</span><h3>{locale === 'en' ? project.statementEn : project.statement}</h3><p>{locale === 'en' ? project.resultEn : project.result}</p></div>
+            <div><span>{project.number}</span><h3>{locale === 'en' ? project.statementEn : project.statement}</h3><p>{locale === 'en' ? project.resultEn : project.result}</p><Link href={project.href}>{project.name === 'Observa' ? copy('Abrir Observa', 'Open Observa') : `${project.name} · ${copy('En construcción', 'Under construction')}`} <span aria-hidden="true">↗</span></Link></div>
             <AnimatedPreview type={project.visual} />
           </article>
         ))}
@@ -175,7 +175,7 @@ function ScrollStory() {
           <MorphIcon icon={previews[active].icon} size={24} strokeWidth={1.7} spring="smooth" />
         </div>
         <div className={styles.storyStack}>
-          {previews.map((project, index) => <StoryPanel key={project.name} project={project} index={index} progress={progress} />)}
+          {previews.map((project, index) => <StoryPanel key={project.name} project={project} index={index} progress={progress} active={index === active} />)}
         </div>
         <p className={styles.scrollHint}>{copy('Desliza para transformar la experiencia', 'Scroll to transform the experience')} <span aria-hidden="true">↓</span></p>
       </div>
@@ -214,7 +214,7 @@ function PreviewCard({ project, index }: { project: (typeof previews)[number]; i
     </motion.article>
   );
 
-  return project.href ? <Link className={styles.cardLink} href={project.href}>{content}</Link> : <div className={styles.cardLink}>{content}</div>;
+  return <Link className={styles.cardLink} href={project.href}>{content}</Link>;
 }
 
 export default function ProjectShowcase() {

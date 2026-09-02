@@ -17,3 +17,10 @@ Profesional, clara y breve. Hablar desde problemas, decisiones y resultados. Evi
 - Los textos accesibles también se traducen.
 
 La revisión final se rige por `.agents/skills/espanol-latinoamerica/SKILL.md`.
+
+## Disponibilidad de proyectos
+
+- Observa: `Demo disponible` / `Demo available`.
+- Ruta y Mesa: `En construcción` / `Under construction`.
+- Sus módulos se etiquetan `Previsto` / `Planned`; las habilidades se expresan en futuro.
+- El aviso de próxima disponibilidad no incluye fechas, progreso inventado ni suscripciones. La vista conceptual aclara que no es una aplicación funcional.

@@ -10,6 +10,7 @@
 2. ESLint: errores de código, reglas de React y Next.js.
 3. TypeScript: contratos de componentes, datos y utilidades sin emitir archivos.
 4. Vitest + Testing Library: idioma persistente, rutas públicas y archivos de descubrimiento.
+   Las páginas pendientes se prueban para Ruta y Mesa en ambos idiomas, incluyendo enlaces a Observa y retorno, aviso de construcción y módulos previstos.
 5. Build estático: comprueba que cada ruta pueda generarse sin servidor.
 6. Revisión manual proporcional: coherencia documental, móvil, teclado, contraste, movimiento reducido y recorrido de Observa.
 

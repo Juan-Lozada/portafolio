@@ -32,6 +32,8 @@ app/
 
 Los componentes con estado o APIs del navegador son Client Components. Las páginas y metadatos permanecen en el servidor cuando no necesitan interactividad. Los módulos pesados de Observa se cargan de forma diferida para reducir el JavaScript inicial.
 
+Ruta y Mesa tienen entradas estáticas en `app/proyectos/ruta/page.tsx` y `app/proyectos/mesa/page.tsx`. Comparten `project-coming-soon.tsx`, sus CSS Modules y el contenido tipado de `pending-projects.ts`. Comunican construcción sin cargar mapas ni gráficas y sin simular funciones disponibles. Sus URLs ya se pueden compartir y figuran en el sitemap. Ver `docs/modules/PENDING_PROJECTS.md` para el contrato y su reemplazo futuro por aplicaciones funcionales.
+
 ## 3. Decisiones clave
 
 ### Internacionalización
@@ -80,7 +82,7 @@ Una respuesta breve:
 Preguntas frecuentes:
 
 - ¿Por qué Leaflet? Compatibilidad amplia, bajo costo para demo, buena integración React y ausencia de dependencia WebGL.
-- ¿Por qué no un framework i18n? El sitio tiene dos rutas y contenido local; un contexto tipado cubre el alcance actual. La documentación deja clara la ruta de evolución.
+- ¿Por qué no un framework i18n? El sitio tiene cuatro rutas y contenido local; un contexto tipado cubre el alcance actual. La documentación deja clara la ruta de evolución.
 - ¿Cómo evitarías que el dashboard crezca sin control? Separaría dominios, contratos de datos y componentes de presentación; añadiría Storybook, pruebas por flujo y presupuesto de rendimiento.
 - ¿Qué falta para producción? Backend, autenticación, permisos, proveedor de mapas con SLA, telemetría, pruebas end-to-end, política de privacidad y despliegue automatizado.
 - ¿Cómo proteges confidencialidad? Toda marca, estación, cifra y escenario es ficticio; las variables sensibles quedan del lado servidor y nunca se incluyen en el bundle cliente.
@@ -90,5 +92,5 @@ Preguntas frecuentes:
 - Extraer diccionarios grandes a archivos por dominio al crecer el contenido.
 - Añadir pruebas unitarias y E2E para idioma, tour, filtros y CRUD.
 - Implementar formatos numéricos con `Intl.NumberFormat` por locale.
-- Incorporar Ruta y Mesa como páginas reales antes de agregarlas al sitemap.
+- Evolucionar las páginas informativas de Ruta y Mesa a aplicaciones funcionales, conservando sus URLs y actualizando estados, pruebas y documentación.
 - Añadir mediciones continuas de Core Web Vitals cuando se defina el hosting.

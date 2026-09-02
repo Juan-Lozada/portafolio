@@ -15,6 +15,8 @@ describe('rutas de descubrimiento', () => {
     expect(sitemap().map((entry) => entry.url)).toEqual([
       'https://juan-lozada.github.io/portafolio',
       'https://juan-lozada.github.io/portafolio/proyectos/observa',
+      'https://juan-lozada.github.io/portafolio/proyectos/ruta',
+      'https://juan-lozada.github.io/portafolio/proyectos/mesa',
     ]);
   });
 

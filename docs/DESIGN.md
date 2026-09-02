@@ -12,6 +12,7 @@ Diseño mobile first. En Observa, el sidebar puede ocultarse, compactarse o ampl
 
 - Homepage: previews animados y relato controlado por scroll.
 - Observa: navegación sin recargas, módulos diferidos y recorrido guiado solo en la primera visita.
+- Ruta y Mesa: páginas de construcción con título compacto, ventana conceptual no interactiva, módulos previstos y accesos reales para regresar o probar Observa. Una columna en móvil, dos desde 900 px; sin cargas simuladas ni temporizadores.
 - Mapas: desplazamiento inercial, vectores en canvas, selector de estaciones y estado de carga inicial no bloqueante.
 - Accesibilidad: HTML semántico, foco visible, etiquetas ARIA y alternativa para movimiento reducido.
 

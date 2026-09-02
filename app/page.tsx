@@ -19,13 +19,13 @@ export default function Home() {
   ]);
   const repositoryUrl = process.env.NEXT_PUBLIC_REPOSITORY_URL;
   const projectSignals = copy([
-    { code: '01', name: 'Observa', detail: 'Datos y monitoreo', status: 'Diseñando' },
-    { code: '02', name: 'Ruta', detail: 'Operación de flota', status: 'Planificado' },
-    { code: '03', name: 'Mesa', detail: 'Pagos con QR', status: 'Planificado' },
+    { code: '01', name: 'Observa', detail: 'Datos y monitoreo', status: 'Demo disponible' },
+    { code: '02', name: 'Ruta', detail: 'Operación de flota', status: 'En construcción' },
+    { code: '03', name: 'Mesa', detail: 'Pagos con QR', status: 'En construcción' },
   ], [
-    { code: '01', name: 'Observa', detail: 'Data and monitoring', status: 'Designing' },
-    { code: '02', name: 'Ruta', detail: 'Fleet operations', status: 'Planned' },
-    { code: '03', name: 'Mesa', detail: 'QR payments', status: 'Planned' },
+    { code: '01', name: 'Observa', detail: 'Data and monitoring', status: 'Demo available' },
+    { code: '02', name: 'Ruta', detail: 'Fleet operations', status: 'Under construction' },
+    { code: '03', name: 'Mesa', detail: 'QR payments', status: 'Under construction' },
   ]);
   const principles = copy([
     ['01', 'Entender', 'Partir desde el problema, el usuario y el contexto del negocio.'],

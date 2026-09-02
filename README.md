@@ -17,6 +17,13 @@ Portafolio profesional y laboratorio de producto construido con Next.js, React y
 
 Todos los productos, marcas, métricas y registros operacionales de las demostraciones son ficticios.
 
+## Estado de los proyectos
+
+- **Observa:** demo disponible de datos y monitoreo.
+- **Ruta y Mesa:** páginas navegables de construcción, con módulos y habilidades previstos; las aplicaciones aún no están disponibles para prueba. Incluyen acceso a Observa y regreso al portafolio.
+
+El contrato de estas páginas está en `docs/modules/PENDING_PROJECTS.md`.
+
 ## Requisitos
 
 - Node.js 22.13 o superior.
@@ -57,6 +64,10 @@ app/
   project-showcase.tsx      proyectos y relato por desplazamiento
   locale-provider.tsx       idioma persistente
   proyectos/observa/        aplicación demostrativa modular
+  proyectos/ruta/           página de Ruta en construcción
+  proyectos/mesa/           página de Mesa en construcción
+  proyectos/pending-projects.ts      contenido tipado de proyectos pendientes
+  proyectos/project-coming-soon.tsx  pantalla compartida de construcción
 docs/
   modules/                  documentación por módulo
   BRAND.md                  identidad y sistema visual

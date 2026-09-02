@@ -32,6 +32,8 @@ Botones con verbo explícito, foco visible y área táctil cercana a 44 px. Tarj
 
 Motion se usa para cambios de módulo y narrativa de scroll; Morphicons para transiciones de iconos. Duraciones habituales: 160–260 ms; entradas narrativas hasta 700 ms. Usar curvas `cubic-bezier(.22,1,.36,1)` y respetar `prefers-reduced-motion`.
 
+En las páginas de construcción, CSS Modules anima la entrada de una ventana conceptual y sus filas (500–600 ms, una sola vez). Morphicons identifica Ruta y Mesa. El estado utiliza tokens de marca, no colores de error ni barras de progreso inventadas. Con movimiento reducido, la ventana se muestra sin animación.
+
 ## Mapas y gráficas
 
 Leaflet + OpenStreetMap para cartografía demostrativa gratuita; ECharts en canvas para visualizaciones. La interfaz nunca debe ocultar atribución, bloquear el mapa durante cargas posteriores ni simular datos reales.
